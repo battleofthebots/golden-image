@@ -44,7 +44,7 @@ jobs:
 
   build:
     runs-on: linux
-    needs: init
+    needs: validate
     steps:
       - name: Build AMI
         run: packer build .
