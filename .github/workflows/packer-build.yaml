@@ -31,6 +31,7 @@ jobs:
 
   validate:
     runs-on: linux
+    needs: init
     permissions:
       contents: read
       # This is used to complete the identity challenge
