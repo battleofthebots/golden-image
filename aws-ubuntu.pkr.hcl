@@ -20,7 +20,7 @@ source "amazon-ebs" "ubuntu" {
   region        = "us-east-1"
   vpc_id = "vpc-0481f270f497d012a"
   subnet_id = "subnet-04d0f1a7ff78c4e29"
-  security_group_id = "sg-00db65aa784f0f66c"
+  #security_group_id = "sg-00db65aa784f0f66c"
   ssh_username = "ubuntu"
   ssh_private_key_file = "/home/ubuntu/.ssh/botb"
   iam_instance_profile = "JaredsTestRoleforECRandSSM"
