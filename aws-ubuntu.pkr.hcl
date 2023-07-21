@@ -15,7 +15,7 @@ packer {
 
 source "amazon-ebs" "ubuntu" {
   #ami_name      = "BotbGoldenImageV3"
-  #ami_name      = "Packer-golden-img-test"
+  ami_name      = "Packer-golden-img-testv2"
   instance_type = "t2.medium"
   region        = "us-east-1"
   vpc_id = "vpc-0481f270f497d012a"
