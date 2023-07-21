@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  validate:
+  init:
     runs-on: linux
     permissions:
       contents: read
@@ -26,6 +26,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Validate file
+        run: packer init .
+
+  validate:
+    runs-on: linux
+    permissions:
+      contents: read
+      # This is used to complete the identity challenge
+      # with sigstore/fulcio when running outside of PRs.
+      id-token: write
+
+    steps:
       - name: Validate file
         run: packer validate .
 
