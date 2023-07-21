@@ -28,8 +28,6 @@ jobs:
 
       - name: Validate file
         run: packer init .
-<<<<<<< HEAD
-=======
 
   validate:
     runs-on: linux
@@ -42,7 +40,6 @@ jobs:
     steps:
       - name: Validate file
         run: packer validate .
->>>>>>> 059d4d7 (get packages for packer)
 
   build:
     runs-on: linux
