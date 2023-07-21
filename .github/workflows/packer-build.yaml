@@ -29,20 +29,9 @@ jobs:
       - name: Validate file
         run: packer init .
 
-  validate:
-    runs-on: linux
-    permissions:
-      contents: read
-      # This is used to complete the identity challenge
-      # with sigstore/fulcio when running outside of PRs.
-      id-token: write
-
-    steps:
-      - name: Validate file
-        run: packer validate .
-
   build:
     runs-on: linux
+    needs: init
     steps:
       - name: Build AMI
         run: packer build .
