@@ -14,15 +14,14 @@ packer {
 
 
 source "amazon-ebs" "ubuntu" {
-  #ami_name      = "BotbGoldenImageV3"
-  ami_name      = "Packer-golden-img-test"
-  instance_type = "t2.medium"
+  ami_name      = "Packer-golden-img-intern-test-1"
+  instance_type = "t2.xlarge"
   region        = "us-east-1"
   vpc_id = "vpc-0481f270f497d012a"
   subnet_id = "subnet-04d0f1a7ff78c4e29"
   security_group_id = "sg-00db65aa784f0f66c"
   ssh_username = "ubuntu"
-  ssh_private_key_file = "/home/ubuntu/.ssh/botb"
+  ssh_private_key_file = "/home/gdev/.ssh/botb"
   iam_instance_profile = "JaredsTestRoleforECRandSSM"
   associate_public_ip_address = true
 
@@ -50,5 +49,5 @@ build {
     script = "script.sh"
     remote_folder = "/home/ubuntu/"
   }
-
+  #post-processor "vagrant" {}
 }
