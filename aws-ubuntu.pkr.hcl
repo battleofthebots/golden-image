@@ -21,7 +21,7 @@ source "amazon-ebs" "ubuntu" {
   subnet_id = "subnet-04d0f1a7ff78c4e29"
   #security_group_id = "sg-00db65aa784f0f66c"
   ssh_username = "ubuntu"
-  ssh_private_key_file = "/home/gdev/.ssh/botb"
+  ssh_private_key_file = "/home/ubuntu/.ssh/botb"
   iam_instance_profile = "JaredsTestRoleforECRandSSM"
   associate_public_ip_address = true
 
