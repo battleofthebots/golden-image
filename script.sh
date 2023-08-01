@@ -4,4 +4,5 @@ echo "hello world" > /home/ubuntu/packer.test
 
 # Pull Dan's latest script  on rebuilds
 cd /home/ubuntu/pve-consumer-deployment;
-git stash && git pull;
+git reset --hard;
+git pull;
