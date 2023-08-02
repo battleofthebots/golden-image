@@ -6,3 +6,6 @@ echo "hello world" > /home/ubuntu/packer.test
 cd /home/ubuntu/pve-consumer-deployment;
 git reset --hard;
 git pull;
+
+# Remove all existing docker images
+docker rm $(docker ps -a -q);
