@@ -9,3 +9,6 @@ git pull;
 
 # Remove all existing docker images
 docker rm $(docker ps -a -q);
+
+# add user to 1001 group
+sudo usermod -aG sugroup user;
