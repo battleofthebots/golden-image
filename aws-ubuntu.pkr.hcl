@@ -12,7 +12,7 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "Packer-golden-img-DEFCON-intern"
+  ami_name      = "Packer-golden-img-DEFCON-intern-v3"
   instance_type = "t2.xlarge"
   region        = "us-east-1"
   vpc_id = "vpc-0481f270f497d012a"
