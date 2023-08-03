@@ -9,3 +9,5 @@ git pull;
 
 # removing old artifacts
 rm /home/ubuntu/pve-consumer-deployment/.consumer.lock;
+
+usermod -aG 1001 ubuntu
