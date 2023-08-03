@@ -6,3 +6,6 @@ echo "hello world" > /home/ubuntu/packer.test
 cd /home/ubuntu/pve-consumer-deployment;
 git reset --hard;
 git pull;
+
+# removing old artifacts
+rm /home/ubuntu/pve-consumer-deployment/.consumer.lock;
