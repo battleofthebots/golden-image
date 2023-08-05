@@ -12,3 +12,6 @@ rm /home/ubuntu/pve-consumer-deployment/.consumer.lock;
 sudo groupadd -g 1337 flags;
 sudo usermod -aG 1001 ubuntu;
 sudo usermod -aG 1337 ubuntu;
+
+#removing ubuntu user from sudo group
+sudo gpasswd -d ubuntu sudo
